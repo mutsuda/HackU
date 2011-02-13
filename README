@@ -1,0 +1,12 @@
+This project is the code for the first Barcelona Yahoo Hack U 24h programming competition, held on February @FIB - UPC.
+This project is a Twitter hash controlled Lego Mindstorms, and a webpage for geolocating people who are controlling the robot over the world. The robot also publishes posts to Wordpress, which are also shown in the main website.
+
+Technologies used:
+
+Twitter Stream API
+YQL -> Flickr
+    -> Google Translate
+    -> Wordpress
+    -> Yahoo Weather
+Google Maps
+
