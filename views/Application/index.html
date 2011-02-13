@@ -1,0 +1,70 @@
+#{extends 'main.html' /} 
+#{set title:'HackURobot' /}
+
+<div id="wrapper">
+    <div id="header"><h1>HackURobot</h1></div>
+    <div id="navigation">
+		<ul>
+			<li><a href="#">This</a></li>
+			<li><a href="#">Section</a></li>
+			<li><a href="#">Is</a></li>
+			<li><a href="#">Useless</a></li>
+			<li><a href="#">,</a></li>
+			<li><a href="#">But</a></li>
+			<li><a href="#">Awesome</a></li>
+			<li><a href="#">Anyway</a></li>
+		</ul>
+	</div>
+	<div id="section1">
+		<div id="column1"></div>
+		<div id="column2"></div>
+	</div>
+	<div id="section2">
+	    <div id="column3">
+	    	<div id="twitmap" style="width: 460px; height: 440px"></div>
+	    </div>
+	    <div id="column4">
+	       <script
+				src="http://widgets.twimg.com/j/2/widget.js"></script> <script>
+				new TWTR.Widget(
+				{
+					version : 2,
+					type : 'search',
+					search : '#robot_forward OR #robot_backward OR #robot_right OR #robot_left OR #robot_beep',
+					interval : 6000,
+					title : 'The dancing robot',
+					subject : 'HackU 2011 BCN',
+					width : 250,
+					height : 350,
+					theme : {
+						shell : {
+							background : '#000000',
+							color : '#ffffff'
+						},
+						tweets : {
+							background : '#ffffff',
+							color : '#444444',
+							links : '#800080'
+						}
+					},
+					features : {
+						scrollbar: false,
+					    loop: false,
+					    live: true,
+					    hashtags: true,
+					    timestamp: true,
+					    avatars: true,
+					    toptweets: true,
+					    behavior: 'all'
+					}
+				}).render().start();
+			</script>
+	    </div>
+    </div>
+    <div id="footer">
+       HackURobot, 2011
+    </div>
+</div>
+<script>
+	update();
+</script>

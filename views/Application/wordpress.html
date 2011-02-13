@@ -1,0 +1,14 @@
+<i>Last updated:<br/>
+${datetime}</i>
+<h2>
+	Blog entries
+</h2>
+#{if posts && posts.size() >= 1}
+    #{list items:posts, as:'post'}
+	    <b>${post.title}</b><br/>${post.post}<br/>
+	#{/list}
+#{/if}
+
+#{else}
+    <br/>No posts.
+#{/else}

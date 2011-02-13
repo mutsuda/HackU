@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>#{get 'title' /}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" media="screen"
+	href="@{'/public/stylesheets/main.css'}">
+<link rel="stylesheet" type="text/css" media="screen"
+	href="@{'/public/stylesheets/style.css'}">
+#{get 'moreStyles' /}
+<link rel="shortcut icon" type="image/png"
+	href="@{'/public/images/favicon.ico'}">
+<script src="@{'/public/javascripts/jquery-1.4.min.js'}"
+	type="text/javascript" charset="utf-8"></script>
+<script src="@{'/public/javascripts/updater.js'}" type="text/javascript"
+	charset="utf-8"></script>
+<script
+	src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAComqPIJ2Qostjz9v9_nz8BT2yXp_ZAY8_ufC3CFXhHIE1NvwkxS9sqoTCqyGtjAeE-qiEFzTDpBpew"
+	type="text/javascript">
+</script>
+#{get 'moreScripts' /}
+</head>
+<body>
+#{doLayout /}
+</body>
+</html>

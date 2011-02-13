@@ -1,0 +1,22 @@
+if (GBrowserIsCompatible()) {
+	// Create map
+	var map = new GMap2(document.getElementById("twitmap"));
+	map.addControl(new GSmallMapControl());
+	 
+	// Add one marker for each twitter user
+	var point;
+	var marker;
+	map.setCenter(new GLatLng(0,0),0);
+	var bounds = new GLatLngBounds();
+	#{list items:twitterLocations, as:'twl'} 
+	    point = new GLatLng(${twl.key});
+		marker = new GMarker(point);
+		bounds.extend(new google.maps.LatLng(${twl.key})); 
+		GEvent.addListener(marker, "click", function() {
+			marker.openInfoWindowHtml("${twl.value}".replace(/&gt;/g,">").replace(/&lt;/g,"<"));
+		});
+		map.addOverlay(marker); 
+	#{/list} 
+	map.setZoom(map.getBoundsZoomLevel(bounds));
+	map.setCenter(bounds.getCenter());
+}
